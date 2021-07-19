@@ -8,5 +8,10 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
+def greeting():
     return "Welcome!"
+
+
+@app.route("/test")
+def health_resp():
+    return "200 OK!"
