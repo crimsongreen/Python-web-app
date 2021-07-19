@@ -1,7 +1,0 @@
-README
-
-Build Image:
-bin/build-image.sh   
-
-Run App
-bin/start-container.sh
