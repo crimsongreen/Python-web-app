@@ -5,5 +5,4 @@
 # git describe --tags
 
 # Gets all images and sorts based on date, use head to show just the latest.
-docker images localhost:5000/python-web-app --format "{{.Repository}} || {{.Tag }} || {{.ID}} || {{.CreatedAt}}" | sort -r | head -n1
-
+docker images localhost:5000/python-web-app --format "{{.Repository}} {{.Tag }} {{.ID}} {{.CreatedAt}}" | sort -k 4,5 -r | head -n1
