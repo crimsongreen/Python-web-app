@@ -1,3 +1,8 @@
+Software versions explained:
+
+v1 is the first release and each software iteration goes up
+by 1 (v2, v3, etc). main branch runs the latest stable code.
+
 Build Image:
 
 Checkout a particular branch
@@ -17,5 +22,19 @@ You can then proceed to start the service with that image
 Alternatively you can run the latest code by following:
 
 `git checkout main`
+
 `bin/build-image.sh latest`
+
 `bin/start-container.sh latest`
+
+
+Contribution:
+1. Fork this repo and clone to your desktop.
+2. Add this repo as upstream
+`git remote add upstream https://github.com/crimsongreen/Python-web-app`
+3. Make sure your repo is up to date
+`git fetch upstream`
+4. checkout a new branch using issue tracker id as branch name
+`git checkout -b <new-branch>`
+5. When you're ready to commit
+open a pull request against upstream `staging` branch
