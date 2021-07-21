@@ -1,9 +1,18 @@
-Software versions explained:
+## Software versions explained:
 
 v1 is the first release and each software iteration goes up
 by 1 (v2, v3, etc). main branch runs the latest stable code.
 
-Build Image:
+### Docker Image tags explained
+
+(branch) v1 == python-web-app:v1 (docker image:tag)
+
+(branch) v2 == python-web-app:v2 (docker image:tag)
+
+(branch) main == python-web-app:latest (docker image:tag)
+
+## Local Development (Docker / Docker Registry running locally required)
+### Build Image:
 
 Checkout a particular branch
 
@@ -19,6 +28,8 @@ You can then proceed to start the service with that image
 
 `bin/start-container.sh v1`
 
+Go to your browser: `http://localhost:8000`
+
 Alternatively you can run the latest code by following:
 
 `git checkout main`
@@ -27,7 +38,7 @@ Alternatively you can run the latest code by following:
 
 `bin/start-container.sh latest`
 
-Deployment to AWS:
+## Deployment to AWS:
 
 `bin/deploy.sh latest`
 
@@ -35,7 +46,7 @@ If this is your first time running this from your laptop
 please make sure you have initialised the terraform aws provider
 using `terraform init` you also must have aws cli installed and configured.
 
-Contribution:
+## Contribution:
 1. Fork this repo and clone to your desktop.
 2. Add this repo as upstream
 `git remote add upstream https://github.com/crimsongreen/Python-web-app`
