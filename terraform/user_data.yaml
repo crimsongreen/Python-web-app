@@ -1,0 +1,3 @@
+#cloud-config
+bootcmd:
+ - cloud-init-per instance $(echo "ECS_CLUSTER=lon01-cluster" >> /etc/ecs/ecs.config)
