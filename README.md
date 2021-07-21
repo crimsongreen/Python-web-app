@@ -27,6 +27,13 @@ Alternatively you can run the latest code by following:
 
 `bin/start-container.sh latest`
 
+Deployment to AWS:
+
+`bin/deploy.sh latest`
+
+If this is your first time running this from your laptop
+please make sure you have initialised the terraform aws provider
+using `terraform init` you also must have aws cli installed and configured.
 
 Contribution:
 1. Fork this repo and clone to your desktop.
