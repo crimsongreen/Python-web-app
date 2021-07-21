@@ -23,5 +23,12 @@ docker tag python-web-app:"$VERSION" "$ECR_REPO":"$VERSION"
 # Push image
 docker push "$ECR_REPO":"$VERSION"
 
+# Sleep to allow tasks to be scheduled 
+echo ""
+echo "Sleeping for 45 seconds to allow tasks to be scheduled"
+sleep 45
+
 # Get loadbalancer DNS - Put into browser to see app.
-aws elbv2 describe-load-balancers --region eu-west-2 | grep frontendlb | grep DNSName | cut -d ":" -f 2 | tr -d ' ",'
+echo ""
+ALB=$(aws elbv2 describe-load-balancers --region eu-west-2 | grep frontendlb | grep DNSName | cut -d ":" -f 2 | tr -d ' ",')
+echo "Use this URL in the browser to test the app: $ALB"
