@@ -56,3 +56,8 @@ using `terraform init` you also must have aws cli installed and configured.
 `git checkout -b <new-branch>`
 5. When you're ready to commit
 open a pull request against upstream `staging` branch
+
+## Diagram
+This Diagram shows the overall system integration and workflow 
+between a user through to the testing and auto deployment to regions
+using CI/CD.
